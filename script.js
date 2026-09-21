@@ -1,75 +1,73 @@
-//scrool suave linksInternos
+const menuButton = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
 
-function initScrollSuave() {
-    const linksInternos = document.querySelectorAll('.header-menu a[href^="#"]');
+menuButton?.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  menuButton.classList.toggle('active', isOpen);
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
 
-    function scrollToSection(event) {
-        event.preventDefault();
-        const href = event.currentTarget.getAttribute('href');
-        const section = document.querySelector(href);
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-        /*forma alternativa
-        const topo = section.offsetTop;
-        window.scrollTo({
-            top: topo,
-            behavior: 'smooth'
-        });*/
-    }
-    linksInternos.forEach((link) => {
-        link.addEventListener('click', scrollToSection);
+document.querySelectorAll('.main-nav a').forEach((link) => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuButton?.classList.remove('active');
+    menuButton?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach((element) => {
+  const delay = element.dataset.delay;
+  if (delay) element.style.setProperty('--delay', `${delay}ms`);
+});
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-visible');
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -30px' });
+
+revealElements.forEach((element) => revealObserver.observe(element));
+
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
     });
+  });
+}, { rootMargin: '-42% 0px -48% 0px' });
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+const copyEmailButton = document.querySelector('.copy-email');
+copyEmailButton?.addEventListener('click', async () => {
+  const email = copyEmailButton.dataset.email;
+  try {
+    await navigator.clipboard.writeText(email);
+    const original = copyEmailButton.textContent;
+    copyEmailButton.textContent = 'E-mail copiado ✓';
+    copyEmailButton.classList.add('copied');
+    setTimeout(() => {
+      copyEmailButton.textContent = original;
+      copyEmailButton.classList.remove('copied');
+    }, 1800);
+  } catch {
+    window.location.href = `mailto:${email}`;
+  }
+});
+
+const glow = document.querySelector('.cursor-glow');
+if (glow && window.matchMedia('(pointer: fine)').matches) {
+  window.addEventListener('pointermove', (event) => {
+    glow.style.opacity = '1';
+    glow.style.left = `${event.clientX}px`;
+    glow.style.top = `${event.clientY}px`;
+  });
+  document.documentElement.addEventListener('mouseleave', () => glow.style.opacity = '0');
 }
-initScrollSuave();
-
-//animaçâo ao scroll
-function initAnaimaScroll() {
-    const sections = document.querySelectorAll('.js-scroll');
-    if (sections.length); {
-        const windowMetade = window.innerHeight * 0.6;
-
-        function animaScroll() {
-
-            sections.forEach((section) => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const isSectionVisible = (sectionTop - windowMetade) < 0;
-                if (isSectionVisible)
-                    section.classList.add('ative');
-
-            })
-        }
-        animaScroll();
-
-        window.addEventListener('scroll', animaScroll);
-    }
-}
-initAnaimaScroll();
-
-function initTecnologiasCarousel() {
-    const track = document.querySelector('.tecnologias-track');
-    if (!track) return;
-
-    const slideGap = 16;
-    const slideWidth = track.querySelector('.tecnologia-item')?.offsetWidth || 120;
-    const intervalTime = 2500;
-    let autoScroll;
-
-    const startAutoScroll = () => {
-        clearInterval(autoScroll);
-        autoScroll = setInterval(() => {
-            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
-                track.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                track.scrollBy({ left: slideWidth + slideGap, behavior: 'smooth' });
-            }
-        }, intervalTime);
-    };
-
-    startAutoScroll();
-    track.addEventListener('mouseover', () => clearInterval(autoScroll));
-    track.addEventListener('mouseout', startAutoScroll);
-}
-
-initTecnologiasCarousel();

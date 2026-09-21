@@ -1,155 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AndersonDev</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/Group 1.svg" type="image/x-icon">
-    
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Anderson Cruz, desenvolvedor frontend focado em interfaces modernas, responsivas e funcionais." />
+  <meta name="theme-color" content="#07090f" />
+  <title>Anderson Cruz — Frontend Developer</title>
+  <link rel="shortcut icon" href="imagens/Group 1.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-    <header class="header">
-        <nav>
-            <ul class="header-menu">
-                <li class="marca"><img src="imagens/Group 1.svg" alt=""></li>
+  <header class="site-header" id="topo">
+    <div class="nav-shell">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand-mark">A</span>
+        <span>Anderson<span class="brand-dot">.</span>dev</span>
+      </a>
 
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
 
-    <main class="introducao " id="inicio">
-        <div>
-            <h1> <span>D</span>esenvolvedor <br> Frontend </h1>
-            <p>Criatividade e inovação andam lado a lado. Com uma combinação única de desing impactante, funcionalidade
-            intuitiva e otimização.</p>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-            <div class ="box-inicio" target="_black">
-                <a href="https://api.whatsapp.com/send?phone=5575991227050" class="whatsapp" target="_blank"><img 
-                    src="imagens/tec.img/icons8-whatsapp.svg"  alt="whats"></a>
+      <a class="nav-cta" href="https://api.whatsapp.com/send?phone=5575991227050" target="_blank" rel="noreferrer">
+        Vamos conversar <span>↗</span>
+      </a>
+    </div>
+  </header>
 
-    
-                <a href="https://github.com/Andersoncz" class="github"target="_black" ><img 
-                    src="imagens/tec.img/icons8-github.svg" alt=""></a>
-               
-                <a href="https://www.linkedin.com/in/anderson-cruz-profile/?skipRedirect=true" class="linkedin" target="_blank"><img 
-                    src="imagens/tec.img/icons8-linkedin.svg" alt=""></a>
-            </div>
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Disponível para novos projetos</div>
+        <h1>Frontend com <span>design</span>, código e intenção.</h1>
+        <p class="hero-description">
+          Sou Anderson Cruz, desenvolvedor frontend. Transformo ideias em experiências digitais modernas, responsivas e intuitivas.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Ver projetos <span>↓</span></a>
+          <a class="button button-secondary" href="https://github.com/Andersoncz" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
         </div>
 
-
-        <img class="foto-perfil" src="imagens/perfil-removebg-preview.png
-        " alt="anderson">
-
-
-    </main>
-    <section class="tecnologias">
-        <div class="tecnologias-carousel">
-            <div class="tecnologias-track">
-                <div class="tecnologia-item"><img src="imagens/tec.img/icons8-html5.svg" alt="HTML"></div>
-                <div class="tecnologia-item"><img src="./imagens/tec.img/icons8-css3.svg" alt="CSS"></div>
-                <div class="tecnologia-item"><img src="imagens/tec.img/icons8-javascript.svg" alt="JavaScript"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-react-a-javascript-library-for-building-user-interfaces-32.png" alt="React"></div>
-                <div class="tecnologia-item"><img src="imagens/tec.img/icons8-nodejs.svg" alt="Node.js"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-git.svg" alt="Git"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-ux-48.png" alt="UX"></div>
-                <div class="tecnologia-item"><img src="imagens/tec.img/icons8-figma.svg" alt="Figma"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-tailwind-css.svg" alt="Tailwind"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-sql-48.png" alt="SQL"></div>
-                <div class="tecnologia-item"><img src="imagens/icons8-mongodb.svg" alt="MongoDB"></div>
-                <div class="tecnologia-item"><img src="imagens/tec.img/icons8-github.svg" alt="GitHub"></div>
-            </div>
+        <div class="hero-meta" aria-label="Links profissionais">
+          <a href="https://www.linkedin.com/in/anderson-cruz-profile/?skipRedirect=true" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:Anderson.cruz20@hotmail.com">E-mail ↗</a>
         </div>
+      </div>
+
+      <div class="hero-visual reveal" data-delay="100">
+        <div class="portrait-card">
+          <div class="portrait-orbit orbit-one"></div>
+          <div class="portrait-orbit orbit-two"></div>
+          <div class="portrait-frame">
+            <img src="imagens/perfil-removebg-preview.png" alt="Anderson Cruz" />
+          </div>
+          <div class="floating-chip chip-code">&lt;/&gt; Frontend</div>
+          <div class="floating-chip chip-ui">✦ UI focada em experiência</div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">SCROLL <span></span></div>
     </section>
 
-
-
-    <section class="sobre" id="sobre" aria-label='sobre'>
-        <div class="sobre-container">
-            <h2 class="subtitulo">sobre mim</h2>
-            <p>Eu me chamo <strong>Anderson Cruz</strong> , sou um entusiasta da tecnologia, minha formação
-                acadêmica é <strong>Análise e Desenvolvimento de
-                    sistemas.Sou pos-graduado em desenvolvimento web e Algorítimos e Lógica de Programação.</strong> </p>
-            <img class="sobre-img" src="https://media.licdn.com/dms/image/v2/D4E03AQGiXrsiV6X4Fw/profile-displayphoto-scale_400_400/B4EZ5Mj4S_IkAg-/0/1779400936646?e=1781136000&v=beta&t=lMLKk1F6xRYkYXKjm_ES8Q_-hiBhALn_ShOUkXElKh4" alt="">
-
-            
-        </div>
-    </section>
-    <section class="projetos" id="projetos" aria-label="projetos">
-        <h2 class="subtitulo">Projetos</h2>
-
-        <div>
-            <ul class="projeto1 ">
-
-                <li>
-                    <p class="title">Page advocacia</p>
-                    <img src="imagens/advogados.png">
-                    <a href="https://andersoncz.github.io/advocacia/" class="advocacia" target="_blank" >VISITE</a>
-                </li>
-                <li>
-                    <p class="title">Animais fantásticos </p>
-                    <img src="imagens/animais fantásticos.png" alt="#">
-                    <a href="https://andersoncz.github.io/Animais/" class="animais"target="_black">VISITE</a>
-                <li>
-                    <p class="title">Cadastro de Serviços</p><img src="imagens/CruzCell Assistec - Google Chrome 22_09_2025 21_44_40.png" alt="">
-                        <a href="https://assistec-front.vercel.app/" class="login"target="_black" >VISITE</a>
-                    </li>
-                </li>
-                <li><p class="title">Futebol25</p><img src="imagens/futebol.png" alt="">
-                    
-                    <a href="/" class="previsao" target="_blank" >VISITE</a>
-                </li>
-                <li><p class="title">Previsão do tempo</p><img src="imagens/previsão do tempo.png" alt="">
-
-                    <a href="https://andersoncz.github.io/previsao/" class="previsao" target="_blank" >VISITE</a>
-                </li>
-                <li><p class="title">Loja do bolo</p><img src="imagens/Casa do Bolo - Google Chrome 09_10_2025 22_35_35.png" alt="">
-                    <a href="#" class="list"target="_black" >VISITE</a>
-                </li>
-                <li><p class="title">Landing page</p><img src="imagens/frutas.png" alt="">
-                    <a href="#" class="calc"target="_black">VISITE</a>
-                </li>
-
-            </ul>
-        </div>
+    <section class="tech-strip" aria-label="Tecnologias">
+      <div class="tech-track">
+        <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i><span>React</span><i>✦</i>
+        <span>Node.js</span><i>✦</i><span>Git</span><i>✦</i><span>Tailwind CSS</span><i>✦</i><span>Figma</span><i>✦</i>
+        <span>MongoDB</span><i>✦</i><span>SQL</span><i>✦</i>
+        <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i><span>React</span><i>✦</i>
+      </div>
     </section>
 
-
-    <footer class="footer" id="contato" >
-        <div class="footer-container">
-            <h2 class="subtitulo">Contato</h2>
-            <img class="footer-img" src="imagens/icons8-telefone-contato-80.png" alt="" >
-            <p class="footer-texto">No momento estou disponível para novos projetos.
-                Entre em contato comigo e iniciaremos uma conversa.
-            </p>
-            <ul class="footer-contato">
-
-                <li>Anderson.cruz20@hotmail.com</li>
-                <li>(75)9 9122-7050</li>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=5575991227050" class="whatsapp" target="_blank"><img src="./imagens/tec.img/icons8-whatsapp.svg" alt="">whatsapp</a>
-                </li>
-            </ul>
-            
-           
-        </div>
+    <section class="projects section-shell" id="projetos">
+      <div class="section-heading reveal">
         <div>
-            <p class="footer-copy">Anderson Cruz . Todos os direitos reservados. 2026</p>
+          <span class="section-kicker">01 / Projetos</span>
+          <h2>Trabalhos selecionados</h2>
         </div>
-        
-    </footer>
-    
+        <p>Uma seleção de interfaces e aplicações que mostram minha evolução em desenvolvimento web e experiência de usuário.</p>
+      </div>
 
+      <div class="projects-grid">
+        <article class="project-card project-featured reveal">
+          <a class="project-media" href="https://assistec-front.vercel.app/" target="_blank" rel="noreferrer" aria-label="Abrir Cadastro de Serviços">
+            <img loading="lazy" src="imagens/CruzCell Assistec - Google Chrome 22_09_2025 21_44_40.png" alt="Tela do projeto Cadastro de Serviços" />
+            <span class="project-open">↗</span>
+          </a>
+          <div class="project-info">
+            <div><span class="project-index">01</span><h3>Cadastro de Serviços</h3></div>
+            <p>Aplicação web para organização e cadastro de serviços, com foco em clareza visual e fluxo simples.</p>
+            <a href="https://assistec-front.vercel.app/" target="_blank" rel="noreferrer">Projeto online ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a class="project-media" href="https://andersoncz.github.io/advocacia/" target="_blank" rel="noreferrer" aria-label="Abrir projeto Advocacia">
+            <img loading="lazy" src="imagens/advogados.png" alt="Tela do projeto Page Advocacia" />
+            <span class="project-open">↗</span>
+          </a>
+          <div class="project-info">
+            <div><span class="project-index">02</span><h3>Page Advocacia</h3></div>
+            <p>Landing page institucional com comunicação objetiva e presença visual profissional.</p>
+            <a href="https://andersoncz.github.io/advocacia/" target="_blank" rel="noreferrer">Projeto online ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="80">
+          <a class="project-media" href="https://andersoncz.github.io/Animais/" target="_blank" rel="noreferrer" aria-label="Abrir projeto Animais Fantásticos">
+            <img loading="lazy" src="imagens/animais-fantasticos.png" alt="Tela do projeto Animais Fantásticos" />
+            <span class="project-open">↗</span>
+          </a>
+          <div class="project-info">
+            <div><span class="project-index">03</span><h3>Animais Fantásticos</h3></div>
+            <p>Projeto visual com conteúdo interativo e composição orientada à exploração da página.</p>
+            <a href="https://andersoncz.github.io/Animais/" target="_blank" rel="noreferrer">Projeto online ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a class="project-media" href="https://andersoncz.github.io/previsao/" target="_blank" rel="noreferrer" aria-label="Abrir projeto Previsão do Tempo">
+            <img loading="lazy" src="imagens/previsao-tempo.png" alt="Tela do projeto Previsão do Tempo" />
+            <span class="project-open">↗</span>
+          </a>
+          <div class="project-info">
+            <div><span class="project-index">04</span><h3>Previsão do Tempo</h3></div>
+            <p>Interface de consulta climática com leitura rápida das informações e design responsivo.</p>
+            <a href="https://andersoncz.github.io/previsao/" target="_blank" rel="noreferrer">Projeto online ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="80">
+          <div class="project-media project-media-static">
+            <img loading="lazy" src="imagens/Casa do Bolo - Google Chrome 09_10_2025 22_35_35.png" alt="Tela do projeto Loja do Bolo" />
+            <span class="coming-soon">EM BREVE</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-index">05</span><h3>Loja do Bolo</h3></div>
+            <p>Projeto de interface para negócio local com destaque visual para produtos e conversão.</p>
+            <span class="project-status">Link público em atualização</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media project-media-static">
+            <img loading="lazy" src="imagens/frutas.png" alt="Tela do projeto Landing Page" />
+            <span class="coming-soon">EM BREVE</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-index">06</span><h3>Landing Page</h3></div>
+            <p>Página promocional com foco em hierarquia visual, apelo gráfico e navegação direta.</p>
+            <span class="project-status">Link público em atualização</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="80">
+          <div class="project-media project-media-static">
+            <img loading="lazy" src="imagens/futebol.png" alt="Tela do projeto Futebol25" />
+            <span class="coming-soon">EM BREVE</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-index">07</span><h3>Futebol25</h3></div>
+            <p>Experimento de interface esportiva com organização de conteúdo e forte apelo visual.</p>
+            <span class="project-status">Link público em atualização</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="sobre">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker">02 / Sobre</span>
+          <h2>Construindo interfaces que fazem sentido.</h2>
+        </div>
+        <p>Meu foco é unir desenvolvimento frontend, experiência do usuário e atenção aos detalhes para criar produtos digitais mais claros e agradáveis.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card about-main reveal">
+          <span class="card-label">QUEM SOU</span>
+          <p>
+            Eu me chamo <strong>Anderson Cruz</strong> e sou entusiasta de tecnologia. Minha formação é em <strong>Análise e Desenvolvimento de Sistemas</strong>, com pós-graduação em <strong>Desenvolvimento Web</strong> e <strong>Algoritmos e Lógica de Programação</strong>.
+          </p>
+          <a href="https://www.linkedin.com/in/anderson-cruz-profile/?skipRedirect=true" target="_blank" rel="noreferrer">Ver LinkedIn ↗</a>
+        </article>
+
+        <article class="about-card about-photo reveal" data-delay="80">
+          <img src="imagens/perfil-removebg-preview.png" alt="Anderson Cruz" />
+          <div><span>Frontend Developer</span><strong>Anderson Cruz</strong></div>
+        </article>
+
+        <article class="about-card about-stack reveal">
+          <span class="card-label">STACK & FERRAMENTAS</span>
+          <div class="skill-cloud">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Git</span><span>Tailwind</span><span>Figma</span><span>MongoDB</span><span>SQL</span>
+          </div>
+        </article>
+
+        <article class="about-card about-focus reveal" data-delay="80">
+          <span class="card-label">FOCO</span>
+          <div class="focus-line"><span>01</span><p>Interfaces responsivas</p></div>
+          <div class="focus-line"><span>02</span><p>Experiência do usuário</p></div>
+          <div class="focus-line"><span>03</span><p>Performance e organização</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contato">
+      <div class="contact-card reveal">
+        <span class="section-kicker">03 / Contato</span>
+        <h2>Tem um projeto em mente?</h2>
+        <p>Estou disponível para novos projetos. Se quiser construir uma interface moderna e funcional, podemos conversar.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://api.whatsapp.com/send?phone=5575991227050" target="_blank" rel="noreferrer">Falar no WhatsApp <span>↗</span></a>
+          <button class="button button-secondary copy-email" type="button" data-email="Anderson.cruz20@hotmail.com">Copiar e-mail</button>
+        </div>
+        <div class="contact-mail">Anderson.cruz20@hotmail.com</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand">Anderson<span>.</span>dev</div>
+    <p>© 2026 Anderson Cruz. Desenvolvido com atenção aos detalhes.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Andersoncz" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/anderson-cruz-profile/?skipRedirect=true" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
